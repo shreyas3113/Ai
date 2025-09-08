@@ -718,8 +718,8 @@ class PrudenceAIV2 {
             this.chatMessages.innerHTML = `
                 <div class="message ai-message" data-welcome="true">
                     <div class="message-content">
-                        <strong>🤖 AADI CLOUD:</strong>
-                        <div>Welcome to AADI CLOUD</div>
+                        <strong>🤖 AI:</strong>
+                        <div>Welcome to AI</div>
                         <div>Start a conversation with your AI assistant. Select different models or use ensemble mode to see responses from multiple AIs.</div>
                     </div>
                     <div class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
@@ -2563,3 +2563,4 @@ window.testDropdown = function() {
 
 
 // ===== HELPER FUNCTIONS =====
+
