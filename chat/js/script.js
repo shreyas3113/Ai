@@ -1,6 +1,6 @@
-// ===== AADI CLOUD - ADAPTED SCRIPT =====
-// Adapted from original script to work with AADI CLOUD UI
-// Adapted from original script to work with AADI CLOUD UI
+// ===== AI- ADAPTED SCRIPT =====
+// Adapted from original script to work with AIUI
+// Adapted from original script to work with AIUI
 
 import { auth, database, ref, set, get } from './core/firebase.js';
 import { loginUser, signUpUser, logoutUser, checkAuthState, resetPassword } from './core/auth.js';
@@ -191,7 +191,7 @@ const checkFirebaseInit = () => {
     }
 };
 
-// AADI CLOUD Chat Interface Class
+// AIChat Interface Class
 class PrudenceAIV2 {
     constructor() {
         // Core properties
@@ -709,7 +709,7 @@ class PrudenceAIV2 {
         this.currentChatId = 'chat_' + Date.now();
         this.messages = [];
         
-        // Expand left sidebar when starting new chat (AADI CLOUD behavior)
+        // Expand left sidebar when starting new chat (AIbehavior)
         if (this.sidebar && this.sidebar.classList.contains('collapsed')) {
             this.sidebar.classList.remove('collapsed');
         }
@@ -814,7 +814,7 @@ class PrudenceAIV2 {
         // Add user message to chat
         this.addMessage(message, 'user');
         
-        // Collapse left sidebar when conversation starts (AADI CLOUD behavior)
+        // Collapse left sidebar when conversation starts (AIbehavior)
         if (this.sidebar && !this.sidebar.classList.contains('collapsed')) {
             this.sidebar.classList.add('collapsed');
         }
@@ -2560,5 +2560,6 @@ window.testDropdown = function() {
     
     console.log('✅ Dropdown test completed');
 };
+
 
 // ===== HELPER FUNCTIONS =====
