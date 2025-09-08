@@ -1,0 +1,17 @@
+
+  {
+    
+
+    "keywords": ["presentation", "lawyer", "legal", "court", "case", "law"],
+    "title": ["Legal Presentation"],
+    "description": ["Generate a professional legal case presentation"],
+    "icon": "⚖️",
+    "questions": [
+      "What type of legal case or topic are you covering?",
+      "Who is the audience (e.g., judge, jury, client)?",
+      "Should this be a persuasive or informative presentation?",
+      "Do you want to include legal precedents or statutes?",
+      "How long should the presentation be?"
+    ]
+  }
+  

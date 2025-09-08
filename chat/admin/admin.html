@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <script type="module" src="admin.js"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <ul>
+                   <!-- <li><a href="#user-management">User Management</a></li>-->
+                    <li><a href="#template-management">Template Management</a></li>
+                </ul>
+            </nav>
+            <button id="logout-button" class="logout-btn">Logout</button>
+        </aside>
+        <main class="admin-main-content">
+
+            <section id="user-management" class="admin-section">
+                <h2>User Management</h2>
+                <p>Content for managing users will go here.</p>
+                <form id="user-form" class="user-form">
+                    <h2 id="user-form-heading">Add New User</h2>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role:</label>
+                        <select id="role" name="role">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="add-user-btn" id="user-form-submit-btn">Add/Update User</button>
+                </form>
+                <div id="user-list" class="user-list">
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Users will be loaded here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="template-management" class="admin-section">
+                <h2>Template Management</h2>
+                <p>Content for managing templates will go here.</p>
+                <div id="template-list" class="template-list">
+                    <table class="template-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Templates will be loaded here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="add-template-btn" class="btn-submit">Add New Template</button>
+                <form id="template-form" class="template-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="template-title">Template Name:</label>
+                        <input type="text" id="template-title" name="template-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="template-description">Description:</label>
+                        <textarea id="template-description" name="template-description" rows="5" maxlength="1000" required></textarea>
+                        <span id="description-char-count">0/1000</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="template-keywords">Keywords (max 5):</label>
+                        <div id="keywords-container" class="keywords-container">
+                            <input type="text" id="keyword-input" placeholder="Add keyword...">
+                        </div>
+                        <input type="hidden" id="template-keywords" name="template-keywords">
+                    </div>
+                    <div class="form-group">
+                        <label for="template-questions">Questions (max 5):</label>
+                        <div id="questions-container" class="questions-container">
+                            <input type="text" id="question-input" placeholder="Add question...">
+                        </div>
+                        <input type="hidden" id="template-questions" name="template-questions">
+                    </div>
+                    <button type="submit" class="btn-submit">Save Template</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

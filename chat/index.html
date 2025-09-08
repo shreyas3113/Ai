@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AADI CLOUD - The Collective Mind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/template-suggestions.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h2>AADI CLOUD</h2>
+                           <!--<span>v2.0</span>--> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Chat Button -->
+                <button class="new-chat-btn" id="newChatButton">
+                    <div class="btn-content">
+                        <i class="fas fa-plus"></i>
+                        <span>New Chat</span>
+                    </div>
+                    <div class="btn-glow"></div>
+                </button>
+
+                <!-- Chat History -->
+                <div class="chat-history" id="historySection">
+                    <div class="history-header">
+                        <h3>Recent Chats</h3>
+                        <button class="clear-history" id="clearHistoryBtn">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="history-list" id="chatHistoryList">
+                        <!-- Chat history items will be added here -->
+                    </div>
+                </div>
+
+                <!-- AI Models Section -->
+                <div class="model-selector-sidebar">
+                    <div class="selector-header">
+                        <div class="selector-title">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Models</span>
+                        </div>
+                        <div class="selector-subtitle">Select up to 3 models</div>
+                    </div>
+                    
+                    <div class="model-dropdown">
+                        <button class="dropdown-toggle" id="modelDropdownToggle">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Select Models</span>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <div class="dropdown-content" id="modelDropdownContent">
+                            <!-- Model options will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="selected-models-display">
+                        <div class="selected-models-title">Selected Models:</div>
+                        <div class="selected-models-list" id="selectedModelsList">
+                            <div class="no-models">No models selected</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Bottom -->
+                <div class="sidebar-bottom">
+                    <button class="logout-btn" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                   <!-- <button class="settings-btn" id="settingsBtn">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </button>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="app-title">
+                        <h1>AADI CLOUD</h1>
+                        <div class="subtitle">The Collective Mind</div>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="download-guide-btn" id="guideDownloadBtn" title="Download Guide">
+                        <i class="fas fa-download"></i>
+                        <span>Download Guide</span>
+                    </button>
+                    <button class="theme-btn" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="ensemble-btn" id="compareToggle">
+                        <i class="fas fa-check"></i>
+                        <span>Ensemble Mode</span>
+                    </button>
+                    <button class="expand-right-sidebar-btn" id="expandRightSidebarBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area">
+                <div class="messages" id="chatMessages">
+                    <div class="message ai-message" data-welcome="true">
+                        <div class="message-content">
+                            <strong>🤖 Prudence AI:</strong>
+                            <div>Welcome to AADI CLOUD</div>
+                            <div>Start a conversation with your AI assistant. Select different models or use ensemble mode to see responses from multiple AIs.</div>
+                        </div>
+                        <div class="message-time">05:54 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="message-input-container">
+                <div class="input-wrapper">
+                    <button class="attachment-btn" id="attachmentBtn" title="Attach Files">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="optimize-btn" id="optimizeBtn" title="Prompt Optimize">
+                        <i class="fas fa-magic"></i>
+                    </button>
+                    <input type="text" id="messageInput" class="message-input" placeholder="Type your message here..." autocomplete="off">
+                    <button class="send-btn" id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar for Individual Responses -->
+        <div class="right-sidebar" id="rightSidebar">
+            <div class="right-sidebar-header">
+                <h3>
+                    <i class="fas fa-robot"></i>
+                    Individual Responses
+                </h3>
+                <div class="right-sidebar-controls">
+                    
+                        <!--<i class="fas fa-grip-vertical"></i>-->
+                    </button>
+                    <button class="close-right-sidebar" id="closeRightSidebarBtn" title="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="right-sidebar-content">
+                <div class="individual-responses" id="individualResponses">
+                    <!-- Individual responses will be added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; width: 90%; max-width: 300px; color: black;">
+            <h2 id="modalTitle">Login</h2>
+            <input type="text" id="modalEmail" placeholder="Email" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="password" id="modalPassword" placeholder="Password" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <button id="modalSubmit" style="width: 100%; padding: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+            <a href="#" id="forgotPasswordLink" style="display: block; text-align: center; margin-top: 10px; color: #667eea; text-decoration: none;">Forgot Password?</a>
+            <button id="modalClose" style="width: 100%; padding: 10px; margin-top: 10px; background: #ccc; color: black; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+            <div id="toggleModalAuth" style="margin-top: 10px; color: #667eea; cursor: pointer;">Need an account? Sign Up</div>
+        </div>
+    </div>
+
+    <!-- Compare Pop-out Modal -->
+    <div id="comparePopoutModal" class="compare-popout-modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:2000; display:none; align-items:center; justify-content:center;">
+        <div class="compare-popout-content">
+            <button id="closeComparePopout" style="position:absolute; top:1rem; right:1rem; background:transparent; border:none; font-size:1.8rem; cursor:pointer; color:#888;">&times;</button>
+            <div id="comparePopoutContentArea"></div>
+        </div>
+    </div>
+
+    <!-- JSON Modal -->
+    <div id="jsonModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center;">
+        <div style="background:#fff; color:#222; border-radius:1.5rem; max-width:700px; width:90vw; max-height:90vh; overflow:auto; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:2rem;">
+            <button id="closeJsonModal" style="position:absolute; top:1rem; right:1rem; background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#888;">&times;</button>
+            <pre id="jsonModalContent" style="font-family:monospace; font-size:1em; background:#f4f4f4; border-radius:8px; padding:1em;"></pre>
+        </div>
+    </div>
+
+    <!-- Floating Temperature Slider -->
+    <div id="floating-temp-slider" style="display:none; position:fixed; z-index:99999; background:#fff; color:#222; border-radius:0.7em; box-shadow:0 2px 8px rgba(0,0,0,0.12); padding:0.5em 1em; min-width:180px; text-align:center; border:1px solid #ddd;">
+        <!-- Slider will be rendered here by JS -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

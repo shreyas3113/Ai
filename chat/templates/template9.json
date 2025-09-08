@@ -1,0 +1,17 @@
+
+  {
+    
+
+    "keywords": ["presentation", "project", "status", "update", "milestone", "progress"],
+    "title": ["Project Status Update Presentation"],
+    "description": ["Share your project’s current progress and next steps"],
+    "icon": "📅",
+    "questions": [
+      "What is the name of the project?",
+      "What phase or stage is the project in?",
+      "What are the recent accomplishments or deliverables?",
+      "Are there any blockers or issues?",
+      "What are the next action items or deadlines?"
+    ]
+  }
+

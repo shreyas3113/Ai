@@ -1,0 +1,16 @@
+
+  {
+   
+    "keywords": ["presentation", "software", "tech", "product", "demo", "engineer"],
+    "title": ["Technical Product Demo"],
+    "description": ["Present a software or tech product with clarity"],
+    "icon": "💻",
+    "questions": [
+      "What is the product or feature you're demoing?",
+      "What problem does it solve for users?",
+      "Who is your technical audience?",
+      "Should the demo include live walkthroughs or screenshots?",
+      "Any key metrics or benchmarks to highlight?"
+    ]
+  }
+

@@ -1,0 +1,16 @@
+
+  {
+   
+    "keywords": ["presentation", "education", "teaching", "school", "university"],
+    "title": ["Educational Presentation"],
+    "description": ["Create an engaging educational presentation"],
+    "icon": "🎓",
+    "questions": [
+      "What subject are you teaching?",
+      "What age group or education level is your audience?",
+      "What are the key learning objectives?",
+      "Do you need interactive elements included?",
+      "How much time do you have for this presentation?"
+    ]
+  }
+  

@@ -1,0 +1,16 @@
+
+  {
+    
+    "keywords": ["presentation", "medical", "doctor", "healthcare", "nursing", "hospital"],
+    "title": ["Medical Presentation"],
+    "description": ["Craft a clear and informative medical or healthcare presentation"],
+    "icon": "🩺",
+    "questions": [
+      "What is the medical topic or case you are presenting?",
+      "Is this presentation for professionals or patients?",
+      "Do you need diagrams or case studies included?",
+      "Are there any ethical considerations to include?",
+      "How technical should the language be?"
+    ]
+  }
+

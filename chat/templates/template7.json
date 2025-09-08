@@ -1,0 +1,16 @@
+
+  {
+    
+    "keywords": ["presentation", "science", "research", "study", "experiment", "data"],
+    "title": ["Scientific Research Presentation"],
+    "description": ["Showcase your research findings effectively"],
+    "icon": "🔬",
+    "questions": [
+      "What is the title of your research project?",
+      "What was your hypothesis or research question?",
+      "What methods and data were used?",
+      "What are your major findings or conclusions?",
+      "Is the presentation for a conference, thesis, or class?"
+    ]
+  }
+

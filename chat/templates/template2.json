@@ -1,0 +1,22 @@
+
+  {
+    
+      
+     "keywords": ["business", "proposal", "presentation", "executive", "startup", "pitch", "investor", "entrepreneur"],
+    "title": "Business Proposal Presentation",
+    "description": "Create a compelling business proposal presentation.",
+    "icon": "💼",
+    "questions": [
+      "What is the main objective of the proposal?",
+      "Who is the target audience?",
+      "What are the key benefits and features?",
+      "What is the proposed budget and timeline?"
+    ],
+    "format": "presentation",
+    "style": "professional",
+    "audience": "business executives",
+    "length": "10 slides",
+    "tone": "persuasive"
+  }
+  
+  
